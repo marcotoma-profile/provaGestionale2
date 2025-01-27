@@ -32,8 +32,8 @@ public class PersistenceManager {
              PreparedStatement ps = conn.prepareStatement("SELECT * FROM Users");
              ResultSet rs = ps.executeQuery()) {
             while (rs.next()) {
-                int id = rs.getInt("id");
-                String name = rs.getString("username");
+                String id = rs.getString("id");
+                String name = rs.getString("user_name");
                 System.out.println(name + " ha id = " + id);
             }
         } catch (SQLException ex) {
